@@ -1,0 +1,30 @@
+image: "node:20-alpine"
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - yarn install --frozen-lockfile --check-files --non-interactive
+    - yarn run build --base=vuejs-3/
+    - cp dist/index.html dist/404.html # Fix only for GitLab Pages
+    # - yarn build
+    - cp -a dist/. public/    
+    # - npm install
+    # - npm run build
+  artifacts:
+    paths:
+      - public
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Pages deployment job'
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

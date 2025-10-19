@@ -1,0 +1,8 @@
+@import 'bootstrap/scss/bootstrap';
+
+#app {
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 80px;
+}
