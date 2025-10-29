@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="px-4 py-3 my-1 text-center">
+  <div class="px-4 py-3 my-1 text-center wide-screen">
     <h1 class="display-5 fw-bold text-body-emphasis">Vue.js 3</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">
@@ -18,3 +18,16 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+  .wide-screen {
+    min-height: 598px;
+    margin-top: 200px !important;
+  }
+  @media screen and (max-width: 1200px) {
+    .wide-screen {
+      min-height: 60px !important;
+      margin-top: 20px !important;
+    }
+  }
+</style>

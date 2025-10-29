@@ -117,7 +117,7 @@ watch(nombreTotalClient, (newNombreTotalClient) => {
 </script>
 
 <template>
-  <div class="px-4 py-3 my-1 mb-5 d-flex flex-column align-items-center">
+  <div class="px-4 py-3 my-1 mb-5 d-flex flex-column align-items-center wide-screen">
     <div class="contain">
       <h1 class="fs-2 fw-bold text-body-emphasis text-center mb-5">
         Optimisation du temps d'attente:
@@ -221,6 +221,16 @@ watch(nombreTotalClient, (newNombreTotalClient) => {
 </template>
 
 <style scoped>
+.wide-screen {
+  min-height: 648px;
+  margin-top: 106px !important;
+}
+@media screen and (max-width: 1200px) {
+  .wide-screen {
+    min-height: 60px !important;
+    margin-top: 20px !important;
+  }
+}
 .contain {
   max-width: 580px;
   width: 100%;

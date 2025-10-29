@@ -2,7 +2,7 @@
 
 <template>
   <main>
-    <div class="px-4 py-3 my-1 mb-5">
+    <div class="px-4 py-3 my-1 mb-2 mt-1">
       <div class="div-desc col-12 col-sm-10 col-lg-7 col-xl-8 ms-auto me-auto mb-5">
         <h1 class="fs-2 fw-bold text-body-emphasis text-center mb-5">Features</h1>
         <p className="mt-5">
